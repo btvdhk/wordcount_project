@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Count!</title>
+  </head>
+  <body>
+    <h1>There are {{count}} words!</h1>
+
+    <a href="{% url 'home' %}">Start Again?</a>
+
+    <h1>YourText:</h1>
+
+    {{fulltext}}
+
+    <h1>Most used words</h1>
+
+
+    {% for word, counttotal in sortedWords %}
+
+    {{ word }} - {{ counttotal }}
+    <br>
+
+    {% endfor %}
+
+
+  </body>
+</html>
